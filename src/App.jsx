@@ -1,58 +1,14 @@
 import { useState } from "react";
 import { Menu, X, Mail, Phone } from "lucide-react";
-import SkillCard from "./components/SkillCard";
-import ProjectCard from "./components/ProjectCard";
 import Hero from "./components/Hero";
 import About from "./components/About";
+import Skills from "./components/Skills";
+import Projects from "./Projects";
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const skills = {
-    frontend: ["React", "TypeScript", "Tailwind CSS", "HTML5", "CSS3"],
-    backend: ["Node.js", "Express", "MongoDB", "PostgreSQL"],
-    tools: ["Git", "VS Code", "Github", "Figma"],
-  };
-
-  const projects = [
-    {
-      name: "E-Commerce Platform",
-      image:
-        "https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&q=80&w=1000",
-      description:
-        "A full-stack e-commerce platform with real-time inventory management",
-      tech: ["React", "Node.js", "MongoDB", "Redux"],
-      liveLink: "https://example.com",
-      githubLink: "https://github.com",
-      challenges:
-        "Implementing real-time inventory updates and optimizing performance",
-      future: "Adding AI-powered product recommendations",
-    },
-    {
-      name: "Task Management System",
-      image:
-        "https://images.unsplash.com/photo-1540350394557-8d14678e7f91?auto=format&fit=crop&q=80&w=1000",
-      description:
-        "Collaborative task management system with real-time updates",
-      tech: ["React", "Firebase", "Material-UI"],
-      liveLink: "https://example.com",
-      githubLink: "https://github.com",
-      challenges: "Managing real-time collaboration features",
-      future: "Adding calendar integration and time tracking",
-    },
-    {
-      name: "Weather Dashboard",
-      image:
-        "https://images.unsplash.com/photo-1592210454359-9043f067919b?auto=format&fit=crop&q=80&w=1000",
-      description:
-        "Interactive weather dashboard with location-based forecasts",
-      tech: ["React", "OpenWeather API", "Chart.js"],
-      liveLink: "https://example.com",
-      githubLink: "https://github.com",
-      challenges: "Handling various weather data formats and API rate limits",
-      future: "Adding severe weather alerts and notifications",
-    },
-  ];
+ 
 
   const navLinks = (
     <>
@@ -133,29 +89,10 @@ function App() {
       <About></About>
 
       {/* Skills Section */}
-      <section id="skills" className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center mb-12">Skills</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <SkillCard title="Frontend" skills={skills.frontend} />
-            <SkillCard title="Backend" skills={skills.backend} />
-            <SkillCard title="Tools" skills={skills.tools} />
-          </div>
-        </div>
-      </section>
+      <Skills></Skills>
 
       {/* Projects Section */}
-      <section id="projects" className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center mb-12">Projects</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects.map((project, index) => (
-              <ProjectCard key={index} project={project} />
-            ))}
-          </div>
-        </div>
-      </section>
-
+     <Projects></Projects>
       {/* Contact Section */}
       <section id="contact" className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

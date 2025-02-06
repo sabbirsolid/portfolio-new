@@ -82,5 +82,4 @@ ProjectCard.propTypes = {
     future: PropTypes.string.isRequired,
   }).isRequired,
 };
-
 export default ProjectCard;

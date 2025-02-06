@@ -1,5 +1,5 @@
 import { Download, Github, Linkedin, Facebook } from "lucide-react";
-
+import hero from '../assets/copy.jpg'
 const Hero = () => {
   const resumeLink =
     "https://drive.google.com/file/d/1YmvR2OYB5iXgsS7SsufuhTKFbYN6UnEo/view?usp=sharing";
@@ -57,7 +57,7 @@ const Hero = () => {
           </div>
           <div className="md:w-1/2 flex justify-center">
             <img
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=400"
+              src={hero}
               alt="Profile"
               className="rounded-full w-64 h-64 object-cover shadow-lg transform hover:scale-105 transition duration-300"
             />
