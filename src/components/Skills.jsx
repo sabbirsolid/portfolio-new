@@ -2,8 +2,8 @@ import SkillCard from "./SkillCard";
 
 const Skills = () => {
   const skills = {
-    frontend: ["React", "TypeScript", "Tailwind CSS", "HTML5", "CSS3"],
-    backend: ["Node.js", "Express", "MongoDB", "PostgreSQL"],
+    frontend: ["React", "Tailwind CSS", "HTML5", "CSS3"],
+    backend: ["Node.js", "Express", "MongoDB"],
     tools: ["Git", "VS Code", "Github", "Figma"],
   };
   return (

@@ -1,14 +1,14 @@
 import { useState } from "react";
-import { Menu, X, Mail, Phone } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Skills from "./components/Skills";
-import Projects from "./Projects";
+import Footer from "./components/Footer";
+import Projects from "./components/Projects";
+import Contacts from "./components/Contacts";
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
- 
 
   const navLinks = (
     <>
@@ -92,38 +92,12 @@ function App() {
       <Skills></Skills>
 
       {/* Projects Section */}
-     <Projects></Projects>
+      <Projects></Projects>
       {/* Contact Section */}
-      <section id="contact" className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center mb-12">Contact Me</h2>
-          <div className="max-w-lg mx-auto">
-            <div className="flex flex-col space-y-4">
-              <a
-                href="mailto:john@example.com"
-                className="flex items-center space-x-3 text-gray-600 hover:text-gray-900 transition duration-300"
-              >
-                <Mail size={20} />
-                <span>john@example.com</span>
-              </a>
-              <a
-                href="tel:+1234567890"
-                className="flex items-center space-x-3 text-gray-600 hover:text-gray-900 transition duration-300"
-              >
-                <Phone size={20} />
-                <span>+1 (234) 567-890</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
+      <Contacts></Contacts>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-8">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p>&copy; 2024 John Doe. All rights reserved.</p>
-        </div>
-      </footer>
+      <Footer></Footer>
     </div>
   );
 }

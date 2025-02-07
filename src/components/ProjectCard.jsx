@@ -14,7 +14,12 @@ const ProjectCard = ({ project }) => {
       />
       <div className="p-6">
         <h3 className="text-xl font-bold mb-2">{project.name}</h3>
-        <p className="text-gray-600 mb-4">{project.description}</p>
+        <p
+          className="text-gray-600 mb-4 text-justify
+"
+        >
+          {project.description}
+        </p>
 
         <button
           onClick={() => setShowDetails(!showDetails)}
